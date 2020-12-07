@@ -1,3 +1,9 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.7.0+cpu
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.8.1+cpu
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torchaudio==0.7.0
 blis==0.7.3
 catalogue==1.0.0
 certifi==2020.11.8
@@ -33,11 +39,11 @@ spacy==2.3.4
 srsly==1.0.4
 thinc==7.4.3
 threadpoolctl==2.1.0
-torch==1.7.0
-torchaudio==0.7.0
-torchvision==0.8.1
 tqdm==4.53.0
 typing-extensions==3.7.4.3
 urllib3==1.26.2
 wasabi==0.8.0
 zipp==3.4.0
+flask
+werkzeug
+ipython
