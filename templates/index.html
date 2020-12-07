@@ -23,12 +23,12 @@
            <h2 style=>Chest X Ray Classifier</h2>
 
    <div class="jumbotron">
-       <form id="upload-file" method="post" action="/predict" enctype="multipart/form-data">
+    <form id="upload-file" method="post" action="/predict" enctype="multipart/form-data">
         <label for="imageUpload" class="upload-label">
             Choose...
         </label>
         <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
-        <a href="result.html" class="btn btn-info" role="button">Predict</a>
+        <input class="btn btn-primary" type="submit" value="Predict">
     </form>
 
 </div>
