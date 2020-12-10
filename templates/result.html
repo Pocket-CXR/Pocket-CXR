@@ -3,8 +3,13 @@
 <div class="jumbotron">
     <div>
         <h3 id="result">
-            <span> Your X-Ray appears to be {{class_name}} </span>
-            <span> </span>
+            <span> Your X-Ray appears to be </span>
+            <span>
+                {% for result in results %}
+                {{result}}
+                {% endfor %}.
+
+            </span>
         </h3>
 
     </div>

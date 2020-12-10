@@ -33,7 +33,7 @@ def predict():
             preds, idx, output = learner.predict(filepath)
             ll = ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 'Infiltration', 'Mass', 'Nodule', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
             d = dict({ll[i]: round(to_np(p)*100,2) for i, p in enumerate(output) if p > 0.2})
-            return render_template("result.html", class_name=d)
+            return render_template("result.html", results=d)
 
 
 if __name__ == "__main__":
