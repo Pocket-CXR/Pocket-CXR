@@ -30,7 +30,8 @@ def predict():
             file.save(filepath)
             export_path = Path('export.pkl')
             learner = load_learner(export_path)
-            result = learner.predict(filepath)
+            preds, idx, output = learner.predict(filepath)
+            d = dict({ll[i]: round(to_np(p)*100,2) for i, p in enumerate(output) if p > 0.2})
             return render_template("result.html", class_name=result[0])
 
 
