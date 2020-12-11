@@ -32,7 +32,7 @@ def predict():
             learner = load_learner(export_path)
             preds, idx, output = learner.predict(filepath)
             probab = output[0].item()
-            probability = probab * 100
+            probability = round(probab * 100,3)
             if preds == "PNEUMONIA":
                 result = "Abnormal"
             else:
