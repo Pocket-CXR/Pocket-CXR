@@ -1,11 +1,11 @@
 {% extends "base.html" %} {% block content %}
 
-<h2>Chest X-Ray Classifier</h2>
+<h2>Check if the Chest- Xray(PA View) is normal or abnormal.</h2>
 
 <div class="jumbotron">
     <form id="upload-file" method="post" action="/predict" enctype="multipart/form-data">
         <label for="imageUpload" class="upload-label">
-            Choose...
+            Upload chest X-Ray image...
         </label>
         <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
         <input class="btn btn-primary" type="submit" value="Predict">
