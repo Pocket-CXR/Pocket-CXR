@@ -31,8 +31,8 @@ def predict():
             export_path = Path('export.pkl')
             learner = load_learner(export_path)
             preds, idx, output = learner.predict(filepath)
-            probability = output[0]
-            return render_template("result.html", results=preds, probability = probability)
+            probability = output[0].item()
+            return render_template("result.html", results=preds, probability = probability, idx = idx)
 
 
 if __name__ == "__main__":
