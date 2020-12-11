@@ -1,16 +1,15 @@
 {% extends "base.html" %} {% block content %}
 <h2>Result</h2>
-<div class="jumbotron">
-    <div>
-        <h3 id="result">
-            <span> Your X-Ray appears to be </span>
-            <span>
-                {{results}} with the probability of {{ probability}}%.
+<div>
+    <h3 id="result">
+        <span> Your X-Ray appears to be </span>
+        <span>
+            {{results}} with the probability of {{ probability}}%.
 
-            </span>
-        </h3>
+        </span>
+    </h3>
 
-    </div>
+</div>
 </div>
 
 {% endblock %}

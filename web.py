@@ -31,12 +31,14 @@ def predict():
             export_path = Path('export.pkl')
             learner = load_learner(export_path)
             preds, idx, output = learner.predict(filepath)
-            probab = output[0].item()
-            probability = round(probab * 100,4)
             if preds == "PNEUMONIA":
                 result = "Abnormal"
+                probab = output[1].item()
+
             else:
                 result = "Normal"
+                probab = output[0].item()
+            probability = round(probab * 100,4)
             return render_template("result.html", results=result, probability = probability)
 
 
